@@ -13,6 +13,11 @@ class Circle:
         self.x = x
         self.y = y
         self.color = c
+    def area(self):
+        return 3.141 * self.rad * self.rad
+
+    def circum(self):
+        return 2 * 3.141 *self.rad
 
 def __add__(self, them):
     newreal = self.real + them.real
@@ -24,11 +29,7 @@ def __mul__(self, them):
     newimag = self.imag * them.imag + self.real * them.real
     return Complex(newreal, newimag)
 
-def area(self):
-    return 3.141 * self.rad * self.rad
 
-def circum(self):
-    return 2 * 3.141 *self.rad
 
 def main():
     m = Complex(3, 5)
