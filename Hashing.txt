@@ -1,0 +1,21 @@
+def hash1(key):
+    num = (key + 7) * (key + 7)
+    num = num // 16
+    num = num % 11
+    return num
+
+
+def hash2(key):
+    jump = 1 + key // 11
+    jump = jump % 10
+    return jump
+
+def main():
+    while True:
+        key = int(input("Enter your key value: "))
+        if(key < 0):
+            break
+        else:
+            print(hash2(key))
+
+main()
